@@ -1,10 +1,19 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div id="app">
+    <Sidebar />
+  </div>
+  <router-view class="content" />
 </template>
+
+<script>
+import Sidebar from "./components/SideBar.vue";
+
+export default {
+  components: {
+    Sidebar,
+  },
+};
+</script>
 
 <style>
 #app {
@@ -14,17 +23,8 @@
   text-align: center;
   color: #2c3e50;
 }
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+.content {
+  margin-left: 250px; /* Adjust the margin based on your sidebar width */
+  padding: 16px;
 }
 </style>
