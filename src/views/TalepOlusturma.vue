@@ -3,7 +3,7 @@
     <div>
       <h1>Talep Oluşturma</h1>
       <form @submit.prevent="submitForm">
-        <label class="labeltext">
+        <label>
           Talep Türünü Seçiniz:
           <select v-model="selectedTalep" class="selectField" required>
             <option value="" disabled selected>Seçiniz</option>
@@ -40,7 +40,7 @@ import { ref } from 'vue';
 import Sidebar from '../components/SideBar.vue';
 
 export default {
-  name: 'TalepOluşturma',
+  name: 'TalepOluturma',
   components: {
     Sidebar,
   },
@@ -68,7 +68,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgb(212, 214, 215);
+  background: #e4e4e4;
   width: 50%;
   margin-top: 5%;
   margin-left: 30%;
@@ -105,7 +105,7 @@ export default {
   cursor: pointer;
   background-color: #412787;
 }
-.labeltext {
+label {
   color: black;
 
 }

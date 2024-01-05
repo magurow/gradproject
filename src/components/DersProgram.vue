@@ -51,7 +51,7 @@ export default {
 
 <style>
 .syllabus-container {
-  max-width: 900px;
+  max-width: 72%;
   margin: 30px auto;
   margin-left: 22%;
   padding: 20px;
@@ -76,7 +76,7 @@ export default {
 
 .syllabus-table th {
   background-color: #7859cd;
-  width: 90px;
+  width: 50%;
   color: white;
 }
 </style>

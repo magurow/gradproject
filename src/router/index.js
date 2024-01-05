@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Login from '../components/Login.vue'
 import AnaSayfa from '../views/AnaSayfa.vue'
 import Talepler from '../views/Talepler.vue'
-import TalepOluşturma from '../views/TalepOluşturma.vue'
+import TalepOlusturma from '../views/TalepOlusturma.vue'
 import Program from '../views/Program.vue'
 
 const routes = [
@@ -22,9 +22,9 @@ const routes = [
     component: Talepler
   },
   {
-    path: '/talep_oluşturma',
-    name: 'TalepOluşturma',
-    component: TalepOluşturma
+    path: '/talep_olusturma',
+    name: 'TalepOlusturma',
+    component: TalepOlusturma
   },
   {
     path: '/program',

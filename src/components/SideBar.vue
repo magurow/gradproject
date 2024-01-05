@@ -2,7 +2,7 @@
   <div class="sidebar">
     <router-link to="/anasayfa">Ana Sayfa</router-link>
     <router-link :to="{ name: 'Talepler' }">Talepler</router-link>
-    <router-link :to="{ name: 'TalepOluşturma' }">Talep Oluşturma</router-link>
+    <router-link :to="{ name: 'TalepOlusturma' }">Talep Oluşturma</router-link>
     <router-link :to="{ name: 'Program' }">Program</router-link>
   </div>
 </template>
@@ -14,7 +14,7 @@ export default {};
 <style scoped>
 .sidebar {
   height: 100%;
-  width: 250px; 
+  width: 20%; 
   position: fixed;
   top: 0;
   left: 0;
