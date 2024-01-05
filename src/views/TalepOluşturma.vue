@@ -1,44 +1,84 @@
 <template>
   <div class="talepOluşturma">
-  <h1>Talep Oluşturun</h1>
-  <form>
-    <label>
-      <textarea type="text" required v-model="talep" class="inputField">
-      Talep oluşturunuz.
-      </textarea>
-    </label>
-  </form>
-</div>
+    <div>
+      <h1>Talep Oluşturma</h1>
+      <form @submit.prevent="submitForm">
+        <label>
+          Talep Oluşturunuz:
+          <textarea v-model="talep" class="inputField" required></textarea>
+        </label>
+        <button type="submit" class="talepButton">Gönder</button>
+      </form>
+    </div>
+  </div>
+  <div id="app">
+    <Sidebar />
+  </div>
 </template>
 
 <script>
-
 import { ref } from 'vue';
+import Sidebar from '../components/SideBar.vue';
 
 export default {
+  name: 'TalepOluşturma',
+  components: {
+    Sidebar,
+  },
   setup() {
-    const talep = ref( ' ' )
+    const talep = ref('');
 
-    return { talep }
-  }
+    const submitForm = () => {
+      // Don't forget the logic here
+      console.log('Form submitted with talep:', talep.value);
+    };
 
-}
+    return {
+      talep,
+      submitForm,
+    };
+  },
+};
 </script>
 
 <style>
-.talepOluşturma{
-  width: 300px;
-  background-color: #e6e6e6;
-  border-radius: 5px;
-  color: rgb(0, 0, 0);
-  padding-right: 24px;
-  margin-left: 50%;
-}
-.inputField{
-  resize: none;
-  padding: 100px 100px 200px 0px;
+.talepOluşturma {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(212, 214, 215);
+  width: 50%;
+  margin-top: 5%;
+  margin-left: 30%;
+  border-radius: 20px;
+  padding: 20px; /* Add padding for better spacing */
 }
 
+.inputField {
+  width: 100%;
+  height: 100px;
+  margin-right: 85px;
+  resize: none;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.talepButton {
+  background-color: #32118d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-left: 25%;
+  width: 50%; 
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+.talepButton:hover{
+  cursor: pointer;
+  background-color: #412787;
+}
 </style>
+
+
 
 

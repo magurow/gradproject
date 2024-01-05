@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import Login from '../components/Login.vue'
 import AnaSayfa from '../views/AnaSayfa.vue'
 import Talepler from '../views/Talepler.vue'
 import TalepOluşturma from '../views/TalepOluşturma.vue'
@@ -7,6 +8,11 @@ import Program from '../views/Program.vue'
 const routes = [
   {
     path: '/',
+    name: 'Login',
+    component: Login
+  },
+  {
+    path: '/anasayfa',
     name: 'AnaSayfa',
     component: AnaSayfa
   },

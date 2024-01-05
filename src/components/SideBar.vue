@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar">
-    <router-link to="/">Ana Sayfa</router-link>
+    <router-link to="/anasayfa">Ana Sayfa</router-link>
     <router-link :to="{ name: 'Talepler' }">Talepler</router-link>
     <router-link :to="{ name: 'TalepOluşturma' }">Talep Oluşturma</router-link>
     <router-link :to="{ name: 'Program' }">Program</router-link>
@@ -12,7 +12,6 @@ export default {};
 </script>
 
 <style scoped>
-/* Add your component-specific styles here */
 .sidebar {
   height: 100%;
   width: 250px; 
@@ -21,6 +20,7 @@ export default {};
   left: 0;
   background-color: #32118d;
   padding-top: 60px; 
+  z-index: 2;
 }
 
 .sidebar a {

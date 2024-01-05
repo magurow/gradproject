@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <Sidebar />
+    <router-view></router-view>
+    
   </div>
-  <router-view class="content" />
+  
 </template>
 
 <script>
-import Sidebar from "./components/SideBar.vue";
+import Login from "./components/Login.vue";
 
 export default {
+  name: 'App',
   components: {
-    Sidebar,
-  },
+    Login
+  }
 };
 </script>
 
@@ -24,7 +26,7 @@ export default {
   color: #2c3e50;
 }
 .content {
-  margin-left: 250px; /* Adjust the margin based on your sidebar width */
+  margin-left: 250px;
   padding: 16px;
 }
 </style>
