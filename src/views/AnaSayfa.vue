@@ -1,21 +1,22 @@
 <template>
   <div class="Anasayfa">
-    <h1>Ana Sayfa</h1>
-    <p>lorem ipsum</p>
-    <p>lorem ipsum</p>
   </div>
   <div id="app">
     <Sidebar />
+  </div>
+  <div id="app">
+    <Dashboard />
   </div>
 </template>
 
 <script>
 import Sidebar from "../components/SideBar.vue";
-
+import Dashboard from "@/components/Dashboard.vue";
 export default {
   name: 'Anasayfa',
   components: {
-    Sidebar
+    Sidebar,
+    Dashboard,
   }
 };
 </script>

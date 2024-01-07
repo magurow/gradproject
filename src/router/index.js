@@ -4,7 +4,7 @@ import AnaSayfa from '../views/AnaSayfa.vue'
 import Talepler from '../views/Talepler.vue'
 import TalepOlusturma from '../views/TalepOlusturma.vue'
 import Program from '../views/Program.vue'
-
+import Ayarlar from '../views/Ayarlar.vue'
 const routes = [
   {
     path: '/',
@@ -30,6 +30,11 @@ const routes = [
     path: '/program',
     name: 'Program',
     component: Program
+  },
+  {
+    path: '/ayarlar',
+    name: 'Ayarlar',
+    component: Ayarlar
   }
 ]
 
