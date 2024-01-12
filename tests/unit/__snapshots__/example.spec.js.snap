@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideBar renders correctly 1`] = `
+<div
+  class="sidebar"
+>
+  <router-link
+    to="/anasayfa"
+  >
+    Ana Sayfa
+  </router-link>
+  <router-link
+    to="[object Object]"
+  >
+    Talepler
+  </router-link>
+  <router-link
+    to="[object Object]"
+  >
+    Talep Oluşturma
+  </router-link>
+  <router-link
+    to="[object Object]"
+  >
+    Program
+  </router-link>
+  <div
+    class="line"
+  />
+  <router-link
+    to="[object Object]"
+  >
+    Ayarlar
+  </router-link>
+  <div
+    class="user-container"
+  >
+    <img
+      alt="user"
+      src=""
+    />
+    <div
+      class="user-info"
+    >
+      <p
+        class="user-name"
+      >
+        Isim Soyisim
+      </p>
+      <p
+        class="user-id"
+      >
+        11223344
+      </p>
+    </div>
+  </div>
+</div>
+`;
