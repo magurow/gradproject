@@ -125,7 +125,7 @@ export default {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 0.8em;
+    font-size: 1em;
     margin: 4px 2px;
     border-radius: 10px;
     width: 100%;
