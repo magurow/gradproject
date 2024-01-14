@@ -1,5 +1,5 @@
 <template>
-  <div class="syllabus-container">
+  <div id="dersProgram" class="syllabus-container">
     <h1>Ders Programı</h1>
 
     <table class="syllabus-table">
@@ -55,10 +55,9 @@ export default {
   margin: 30px auto;
   margin-left: 22%;
   padding: 20px;
-  background-color: #f0f0f0;
+  background-color: #ccc;
   border-radius: 10px;
   text-align: center;
-  position: fixed;
 }
 .syllabus-table {
   width: 100%;
@@ -68,10 +67,12 @@ export default {
 }
 
 .syllabus-table th, .syllabus-table td {
-  border: 1px solid #ccc;
+  border: 1px solid #0f0f0f;
   padding: 10px;
   width: 1%; /*minimum width for the columns */
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: inherit;
 }
 
 .syllabus-table th {
@@ -79,4 +80,5 @@ export default {
   width: 50%;
   color: white;
 }
+
 </style>

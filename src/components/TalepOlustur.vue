@@ -1,5 +1,7 @@
+<!-- TalepOlusturma.vue -->
+
 <template>
-  <div class="talepOluşturma">
+  <div id="talepOluşturma" class="talepOluşturma">
     <div>
       <h1>Talep Oluşturma</h1>
       <form @submit.prevent="submitForm">
@@ -35,40 +37,30 @@
           </select>
         </label>
 
-        
         <label v-if="showSection">
           Sube:
           <select v-model="selectedSection" class="selectField" required>
             <option value="" disabled selected>Seçiniz</option>
             <option value="1">1</option>
             <option value="2">2</option>
-            </select>
+          </select>
         </label>
-        
-        
+
         <label v-if="showRequest">
           Talep Oluşturunuz:
-            <textarea v-model="talep" class="inputField" required></textarea>
-          </label>
-          <button type="submit" class="talepButton">Gönder</button>
-        
+          <textarea v-model="talep" class="inputField" required></textarea>
+        </label>
+        <button type="submit" class="talepButton">Gönder</button>
       </form>
     </div>
   </div>
-  <div id="app">
-    <Sidebar />
-  </div>
 </template>
 
-
 <script>
-import Sidebar from '../components/SideBar.vue';
+
 
 export default {
-  name: 'TalepOluturma',
-  components: {
-    Sidebar,
-  },
+
 
   data() {
     return {
@@ -76,6 +68,7 @@ export default {
       selectedTalep: '',
       selectedDepartment: '',
       selectedCourse: '',
+      selectedSection: '',
       showDepartment: false,
       showselectedDepartmentCourse: false,
       showSection: false,
@@ -174,7 +167,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .talepOluşturma {
   display: flex;
   flex-direction: column;
@@ -198,7 +191,7 @@ export default {
 }
 
 .selectField {
-  width: 80%; 
+  width: 80%;
   margin-right: 85px;
   padding: 8px;
   margin-bottom: 10px;
@@ -210,19 +203,15 @@ export default {
   border: none;
   border-radius: 4px;
   margin-left: 25%;
-  width: 50%; 
+  width: 50%;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
 }
-.talepButton:hover{
+.talepButton:hover {
   cursor: pointer;
   background-color: #412787;
 }
+
 label {
   color: black;
-
 }
 </style>
-
-
-
-

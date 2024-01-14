@@ -33,7 +33,7 @@
                     <td>{{ talep.talepNo }}</td>
                     <td>{{ talep.konu }}</td>
                     <td>{{ talep.tarih }}</td>
-                    <td>{{ talep.durum }}</td>
+                    <td :style="{color: getTextColor(talep.durum)}">{{ talep.durum }}</td>
                   </tr>
                 </tbody>
               </table>
@@ -52,9 +52,20 @@
           talepler: [
             { talepNo: 1, konu: 'Örnek Talep 1', tarih: '2024-01-06', durum: 'Beklemede' },
             { talepNo: 2, konu: 'Örnek Talep 2', tarih: '2024-01-07', durum: 'Tamamlandı' },
-            { talepNo: 3, konu: 'Örnek Talep 3', tarih: '2024-01-08', durum: 'Devam Ediyor' },
+            { talepNo: 3, konu: 'Örnek Talep 3', tarih: '2024-01-08', durum: 'Reddedildi' },
             // daha fazla talep ekleyebilirsiniz
           ]
+        }
+      },
+      methods: {
+        getTextColor(durum){
+          if (durum == 'Beklemede') {
+            return '#FFC107'
+          } else if (durum == 'Tamamlandı') {
+            return '#4CAF50'
+          } else if (durum == 'Reddedildi') {
+            return '#F44336'
+          }
         }
       }
     }
